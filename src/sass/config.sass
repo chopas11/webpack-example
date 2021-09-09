@@ -1,0 +1,52 @@
+//-------------------------------< Cass Libraries >--------------------------------//
+// Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
+// Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'
+// Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+// // Font-awesome
+// @import 'node_modules/font-awesome/scss/font-awesome.scss'
+
+//----------------------------------< Variables >-----------------------------------//
+// Main font
+$font: Montserrat, sans-serif
+// Accent color in page
+$accent: #E84C50
+// Default size for text
+$fontsize: 18px
+// Text color
+$textcolor: #3c4347
+// Margin in grid tabs
+$grid-gutter-width: 20px
+// Media breakpoint for adaptivity
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+
+//--------------------------------< Fonts Including >-------------------------------//
+// Mixin for fonts
+@mixin font($fname, $fstyle, $fweight, $furl, $format)
+  @font-face
+    font-family: $fname
+    font-style: $fstyle
+    font-weight: $fweight
+    font-display: swap
+    src: local($fname), url($furl) format('ttf')
+
+@include font('Montserrat', normal, 400, '../fonts/Montserrat/Montserrat-Regular.ttf', 'ttf')
+@include font('Montserrat', bold, 700, '../fonts/Montserrat/Montserrat-Bold.ttf', 'ttf')
+@include font('Montserrat', italic, 400, '../fonts/Montserrat/Montserrat-Italic.ttf', 'ttf')
+@include font('Montserrat', italic, 700, '../fonts/Montserrat/Montserrat-BoldItalic.ttf', 'ttf')
+
+//--------------------------------< General Styles >--------------------------------//
+::selection
+  background-color: $accent
+  color: #fff
+
+body
+  margin: 0
+  font-family: $font
+  font-size: $fontsize
+  color: $textcolor
+  position: relative
+  line-height: 1.6
+  overflow-x: hidden
