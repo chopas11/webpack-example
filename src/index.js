@@ -8,5 +8,13 @@ import '@sass/main.sass';
 // Main App
 const post = new Post('Webpack Example');
 
-console.log('Post to string', post.toString());
+let obj1 = { name: 'First value' };
+
+let obj2 = obj1;
+
+obj2 = { name: 'Upadated' };
+
+console.log(obj1);
+
+// console.log('Post to string', post.toString());
 //console.log('JSON:', json);

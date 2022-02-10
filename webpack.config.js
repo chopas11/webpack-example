@@ -36,17 +36,17 @@ module.exports = {
   },
   output: {
     filename: `js/${filename('js')}`,
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
     extensions: ['.js', '.json'],
     alias: {
-      '@js': path.resolve(__dirname, 'src/js'),
-      '@models': path.resolve(__dirname, 'src/js/models'),
-      '@fonts': path.resolve(__dirname, 'src/fonts'),
-      '@images': path.resolve(__dirname, 'src/images'),
+      '@js': path.resolve(__dirname, 'src'),
+      '@models': path.resolve(__dirname, 'src/models'),
+      '@fonts': path.resolve(__dirname, 'src/assets/fonts'),
+      '@images': path.resolve(__dirname, 'src/assets'),
       '@styles': path.resolve(__dirname, 'src/styles'),
-      '@sass': path.resolve(__dirname, 'src/sass'),
+      '@sass': path.resolve(__dirname, 'src/styles'),
     },
   },
   devServer: {

@@ -4,8 +4,9 @@
   "description": "Webpack Example",
   "main": "index.js",
   "scripts": {
-    "serve": "cross-env NODE_ENV=development webpack serve --mode development --open",
-    "build": "cross-env NODE_ENV=production webpack --mode production"
+    "start": "cross-env NODE_ENV=development webpack serve --mode development --open",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "test": "jest"
   },
   "keywords": [
     "Webpack",
@@ -26,6 +27,7 @@
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.2.3",
     "mini-css-extract-plugin": "^2.1.0",
     "sass": "^1.35.2",
     "sass-loader": "^12.1.0",
